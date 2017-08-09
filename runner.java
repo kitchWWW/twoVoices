@@ -12,7 +12,7 @@ public class runner {
 	public static void main(String[] args) {
 		String  timeStamp = args[0];
 		for(String s : args){
-			System.out.println(s);
+			System.out.println("arg: "+ s);
 		}
 		ArrayList<Insturment> insturments = new ArrayList<>();
 		insturments.add(new Insturment("Guitar","Acoustic Guitar (nylon)","\"treble_8\"",false,false));
