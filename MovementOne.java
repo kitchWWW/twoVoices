@@ -4,12 +4,15 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class MovementOne {
 
-	public static ArrayList<Note> generate(){
+	public static ArrayList<Note> generate(String[] arg){
 
 		ArrayList<Note> mvmtOne = new ArrayList<>();
 
-		mvmtOne.add(new Note(60,4,""));
-
+		for(String s : arg){
+			int i = Integer.parseInt(s);
+			mvmtOne.add(new Note(60+i,4,""));
+		}
+		
 		return mvmtOne;
 	}
 

@@ -14,20 +14,21 @@ public class runner {
 		for(String s : args){
 			System.out.println("arg: "+ s);
 		}
+		String[] xargs = args[1].replace("[","").replace("]","").split(",");
+		String[] yargs = args[2].replace("[","").replace("]","").split(",");
 		ArrayList<Insturment> insturments = new ArrayList<>();
 		insturments.add(new Insturment("1","Voice Oohs","\"treble\"",false,false));
 		insturments.add(new Insturment("2","Voice Oohs","\"treble\"",false,false));
 
-		ArrayList<Note> oneTemp = MovementOne.generate();
-		//System.out.println(oneTemp);
+		ArrayList<Note> oneTemp = MovementOne.generate(xargs);
+		ArrayList<Note> twoTemp = MovementOne.generate(yargs);
 
 		String oneFinal = Note.toString(oneTemp);
-		//System.out.println(oneFinal);
+		String twoFinal = Note.toString(twoTemp);
 
 		ArrayList<String> finalPart = new ArrayList<>();
 		finalPart.add(oneFinal);
-		finalPart.add(oneFinal);
-		//System.out.println(finalPart);
+		finalPart.add(twoFinal);
 
 		buildParts(timeStamp,"twoVoices", finalPart,insturments);
 		//System.out.println("Done?");
