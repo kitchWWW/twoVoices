@@ -20,8 +20,8 @@ public class runner {
 		insturments.add(new Insturment("1","Voice Oohs","\"treble\"",false,false));
 		insturments.add(new Insturment("2","Voice Oohs","\"treble\"",false,false));
 
-		ArrayList<Note> oneTemp = MovementOne.generate(xargs);
-		ArrayList<Note> twoTemp = MovementOne.generate(yargs);
+		ArrayList<Note> oneTemp = MovementOne.generate(xargs,true);
+		ArrayList<Note> twoTemp = MovementOne.generate(yargs,false);
 
 		String oneFinal = Note.toString(oneTemp);
 		String twoFinal = Note.toString(twoTemp);
