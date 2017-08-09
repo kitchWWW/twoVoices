@@ -1,8 +1,5 @@
 #!/bin/bash
-timestamp=$(date +%s)
-echo "starting run script, with timestamp:"
-echo $timestamp
-mkdir out/$timestamp
+echo "starting run script"
 find . -name "*.class" -type f -delete
 javac runner.java
 echo "Compiled"
