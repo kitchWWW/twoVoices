@@ -15,8 +15,8 @@ public class runner {
 			System.out.println("arg: "+ s);
 		}
 		ArrayList<Insturment> insturments = new ArrayList<>();
-		insturments.add(new Insturment("Guitar","Acoustic Guitar (nylon)","\"treble_8\"",false,false));
-		insturments.add(new Insturment("Guitar","Acoustic Guitar (nylon)","\"treble_8\"",false,false));
+		insturments.add(new Insturment("1","Voice Oohs","\"treble\"",false,false));
+		insturments.add(new Insturment("2","Voice Oohs","\"treble\"",false,false));
 
 		ArrayList<Note> oneTemp = MovementOne.generate();
 		//System.out.println(oneTemp);
